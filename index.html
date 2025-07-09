@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech for Girls Registration</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Tech for Girls Community</h1>
+        <p>Join our vibrant community by registering below!</p>
+        <form id="registrationForm" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email ID</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="college">College/Department</label>
+                <select id="college" name="college" required>
+                    <option value="" disabled selected>Select your college</option>
+                    <option value="Engineering">Engineering</option>
+                    <option value="Arts & Science">Arts & Science</option>
+                    <option value="Medical">Medical</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+            <div class="whatsapp-section">
+                <button type="button" id="whatsappBtn" class="whatsapp-btn">Share on WhatsApp</button>
+                <p id="clickCounter">Click count: 0/5</p>
+            </div>
+            <div class="form-group">
+                <label for="screenshot">Upload Screenshot</label>
+                <input type="file" id="screenshot" name="screenshot" accept="image/*" required>
+            </div>
+            <button type="submit" id="submitBtn" class="submit-btn">Submit Registration</button>
+        </form>
+        <p id="message"></p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
